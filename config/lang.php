@@ -9,7 +9,7 @@ $aLang = [
         'password' => 'Contraseña',
         'login' => 'Iniciar Sesion',
         'signup' => 'Registrarse',
-
+        'deleteUser' => 'Borrar usuario',
         'title' => 'Programa',
         'logoff' => 'Cerrar Sesion',
         'welcome' => 'Bienvenido/a '.(isset($usuarioActual) ? $usuarioActual->getDescUsuario() : null),
@@ -25,7 +25,7 @@ $aLang = [
         'password' => 'Password',
         'login' => 'Login',
         'signup' => 'Sign Up',
-
+        'deleteUser' => 'Delete User',
         'title' => 'Program',
         'logoff' => 'Logoff',
         'welcome' => 'Welcome '.(isset($usuarioActual) ? $usuarioActual->getDescUsuario() : null),

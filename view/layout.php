@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
     <html>
         <head>
@@ -12,11 +11,12 @@
         </head>
         <body>
 
-            <?php require_once $vista ?>
+            <?php require_once $vistaEnCurso ?>
 
         <footer class="fixed">
-            <a href="http://daw205.ieslossauces.es/" target="_blank">1&1</a>
-            <a href="https://github.com/ArkaitzRMSauces/LoginLogoffTema6" target="_blank">Git Hub</a>
+            <a href="http://daw217.ieslossauces.es/" target="_blank"> <img src="webroot/media/oneandone.png" alt="oneandone icon" width="40"></a>
+            <address>  <a href="../../index.html">&copy; 2020-2021 Javier Nieto Lorenzo</a> </address>
+            <a href="https://github.com/JavierNLSauces/" target="_blank"><img class="github" width="40" src="webroot/media/github.png" ></a>
         </footer>
     </body>
 </html>

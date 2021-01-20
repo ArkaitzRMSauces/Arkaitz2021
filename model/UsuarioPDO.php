@@ -85,8 +85,7 @@ class UsuarioPDO{
      */
     public static function borrarUsuario($codUsuario){
         $borrar = "DELETE FROM T01_Usuario WHERE T01_CodUsuario=?";//consulta de borrar usuario
-        DBPDO::ejecutaConsulta($borrar, [$codUsuario]);//ejecuta la consulta de borrar usuario
-        return true;        
+        DBPDO::ejecutaConsulta($borrar, [$codUsuario]);//ejecuta la consulta de borrar usuario  
     }
 
     /**

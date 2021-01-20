@@ -7,12 +7,14 @@ require_once "model/DBPDO.php";
 
 $controladores = [
     "login" => "controller/cLogin.php",
-    "inicio" => "controller/cInicio.php"
+    "inicio" => "controller/cInicio.php",
+    "borrar" => "controller/cBorrarUsuario"
 ];
 
 $vistas = [
     "layout" => "view/layout.php",
     "login" => "view/vLogin.php",
-    "inicio" => "view/vInicio.php"
+    "inicio" => "view/vInicio.php",
+    "borrar" => "view/vBorrarUsuario"
 ];
 ?>

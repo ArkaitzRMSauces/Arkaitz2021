@@ -8,6 +8,6 @@
         header("Location: index.php");
         exit;
     }
-    $vistaEnCurso = $vistas['borrarUsuario']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
+    $vistaEnCurso = $vistas['borrar']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
     require_once $vistas['layout'];
 ?>

@@ -5,6 +5,7 @@
     }
     if(isset($_REQUEST['borrarUsuario'])){
         $oUsuario = UsuarioPDO::borrarUsuario($_REQUEST['CodUsuario']);
+        session_destroy();
         header("Location: index.php");
         exit;
     }

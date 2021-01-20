@@ -7,7 +7,6 @@
             <button class="logout" type="submit" name="borrarUsuario"><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></button>
         </form>
     </div>
-
 </header>
 <main class="main-container-inicio" class="flex-container-align-item-center">
     <article>

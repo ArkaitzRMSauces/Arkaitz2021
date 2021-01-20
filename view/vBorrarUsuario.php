@@ -3,8 +3,10 @@
 </header>
 <main class="main-container-inicio" class="flex-container-align-item-center">
     <article>
-        <button class="button" type="submit" value="borrarUsuario"><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></button>
-        <button class="button" type="submit" value="cancelar" ><?php echo $aLang[$_COOKIE['idioma']]['out']; ?></button>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <button class="button" type="submit" name="borrarUsuario"><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></button>
+            <button class="button" type="submit" name="cancelar" ><?php echo $aLang[$_COOKIE['idioma']]['out']; ?></button>
+        </form>
     </article>
 </main>
 </body>

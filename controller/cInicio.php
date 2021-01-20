@@ -10,6 +10,11 @@ if (isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el boton de Cerrar S
     header("Location: index.php"); // redirige al login
     exit;
 }
+if(isset($_REQUEST['borrarUsuario'])){
+    $_SESSION['paginaEnCurso'] = $controladores['borrar'];
+    header("Location: index.php");
+    exit;
+}
 $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 
 $numConexiones = $oUsuarioActual->getNumConexiones(); // variable que tiene el numero de conexiones sacado de la base de datos

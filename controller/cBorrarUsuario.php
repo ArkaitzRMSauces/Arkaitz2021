@@ -4,9 +4,14 @@
         exit;
     }
     if(isset($_REQUEST['borrarUsuario'])){
-        $oUsuario = UsuarioPDO::borrarUsuario($_REQUEST['CodUsuario']);
+        UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW2LoginLogoffMulticapaPOO']->getCodUsuario());
         session_destroy();
         header("Location: index.php");
+        exit;
+    }
+    if(isset($_REQUEST['cancelar'])){
+        $_SESSION['paginaEnCurso'] = $controladores['inicio'];
+        header("Location: index.php");        
         exit;
     }
     $vistaEnCurso = $vistas['borrar']; // guardamos en la variable vistaEnCurso la vista que queremos implementar

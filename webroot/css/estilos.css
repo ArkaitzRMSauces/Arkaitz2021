@@ -36,7 +36,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    background-color: rgb(255 137 0 / 0.74);
+    background-color: rgba(212, 28, 151, 0.74);
     height: 50px;
     font-family: "Bangers";
 }
@@ -63,7 +63,7 @@ main {
 footer {
     height: 50px;
     text-align: center;
-    background-color: #908c8c75;
+    background-color: #000000cc;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -79,7 +79,9 @@ footer a{
     text-decoration: none;
     color: black;
 }
-
+.colorWhite{
+    color: white;
+}
 .flex-container-align-item-center{
     display: flex;
     align-items: center;

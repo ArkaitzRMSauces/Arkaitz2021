@@ -1,5 +1,5 @@
 <header>
-    <h1>Inicio</h1>
+    <h1 class="colorWhite">Inicio</h1>
     <div class="buttons-header-inicio">
         <?php echo ($imagenUsuario != null) ? '<img id="fotoPerfil" src = "data:image/png;base64,' . base64_encode($imagenUsuario) . '" alt="Foto de perfil"/>' : "<img id='fotoPerfil' src='webroot/media/imagen_perfil.png' alt='imagen_perfil'/>" ; ?>
         <form name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

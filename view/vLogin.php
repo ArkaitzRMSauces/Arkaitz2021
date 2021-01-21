@@ -1,5 +1,5 @@
 <header>
-    <h1>Login</h1>
+    <h1 class="colorWhite">Login</h1>
 </header>
 <main class="flex-container-align-item-center">
     <form name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

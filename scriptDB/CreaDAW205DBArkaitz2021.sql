@@ -1,6 +1,6 @@
 -- CREACION BASE DE DATOS
 -- Creacion de la base de datos DAW215DBDepartamentos
-CREATE DATABASE if NOT EXISTS DAW205DBProyectoTema5;
+CREATE DATABASE DAW205DBArkaitz2021;
 -- Creacion de tablas de la base de datos
 CREATE TABLE IF NOT EXISTS T02_Departamento(
     T02_CodDepartamento VARCHAR(3) PRIMARY KEY,
@@ -22,6 +22,6 @@ CREATE TABLE IF NOT EXISTS T01_Usuario(
 
 -- CREACION USUARIO ADMINISTRADOR
 -- Creacion de usuario administrador de la base de datos: usuarioDAW215DBDepartamentos / paso
-CREATE USER 'usuarioDAW205DBProyectoTema5'@'%' IDENTIFIED BY 'P@ssw0rd';
+CREATE USER 'usuarioDAW205DBArkaitz2021'@'%' IDENTIFIED BY 'P@ssw0rd';
 -- Permisos para la base de datos
-GRANT ALL PRIVILEGES ON DAW205DBProyectoTema5.* TO 'usuarioDAW205DBProyectoTema5'@'%';
+GRANT ALL PRIVILEGES ON DAW205DBArkaitz2021.* TO 'usuarioDAW205DBArkaitz2021'@'%';

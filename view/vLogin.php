@@ -1,22 +1,19 @@
 <header>
-    <h1 class="colorWhite">Login</h1>
+    <h1><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></h1>
 </header>
-<main class="flex-container-align-item-center">
-    <form name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: black;'" : null; ?> class="idioma " type="submit" name="idiomaElegido" value="es"> Castellano</button>
-        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: black;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en"> English</button>
+<main>
+    <form class="formIdiomas" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button <?php echo ($_COOKIE['idioma'] == "es") ? : null; ?> type="submit" name="idiomaElegido" value="es"> Castellano</button>
+        <button <?php echo ($_COOKIE['idioma'] == "en") ? : null; ?> type="submit" name="idiomaElegido" value="en"> English</button>
     </form>
-    <form name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
+    <form class="formMain" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div>
-            <label for="CodUsuario"><?php echo $aLang[$_COOKIE['idioma']]['user']; ?></label>
-            <input class="required" type="text" id="CodUsuario" name="CodUsuario" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['user']; ?>" value="<?php
+            <input class="inputMain" type="text" id="CodUsuario" name="CodUsuario" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['user']; ?>" value="<?php
             echo (isset($_REQUEST['CodUsuario'])) ? $_REQUEST['CodUsuario'] : null;
             ?>">
         </div>
         <div>
-            <label for="Password"><?php echo $aLang[$_COOKIE['idioma']]['password']; ?></label>
-            <input class="required" type="password" id="Password" name="Password" value="<?php
+            <input class="inputMain" type="password" id="Password" name="Password" value="<?php
             echo (isset($_REQUEST['Password'])) ? $_REQUEST['Password'] : null;
             ?>" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['password']; ?>">
         </div>

@@ -2,17 +2,6 @@
     Autor.- Javier Nieto 
     Fecha de modificacion.- 2020/09/29
 */
-
-@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-@font-face {
-    font-family: "Bangers";
-    src: url(../fonts/Bangers-Regular.ttf);
-}
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@font-face {
-    font-family: "Roboto";
-    src: url(../fonts/Roboto-Medium.ttf);
-}
 * {
     box-sizing: border-box;
 }
@@ -35,10 +24,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
-    background-color: rgba(212, 28, 151, 0.74);
+    background-color: #000000;
     height: 50px;
-    font-family: "Bangers";
+    font-family: "proxima-nova";
 }
 
 header > h1 {
@@ -56,7 +44,7 @@ header > h1 {
 main {
     min-height: calc(100vh - 140px);
     margin: 20px; 
-    font-family: "Roboto";
+    font-family: "proxima-nova";
 }
 /* -------- FOOTER -------- */
 
@@ -67,7 +55,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-family: "Bangers";
+    font-family: "proxima-nova";
     width: 100vw;
 }
 footer > address {

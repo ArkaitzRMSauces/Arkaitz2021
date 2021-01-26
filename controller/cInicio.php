@@ -15,6 +15,11 @@ if(isset($_REQUEST['borrarUsuario'])){
     header("Location: index.php");
     exit;
 }
+if(isset($_REQUEST['rest'])){
+    $_SESSION['paginaEnCurso'] = $controladores['rest'];
+    header("Location: index.php");
+    exit;
+}
 $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 
 $numConexiones = $oUsuarioActual->getNumConexiones(); // variable que tiene el numero de conexiones sacado de la base de datos

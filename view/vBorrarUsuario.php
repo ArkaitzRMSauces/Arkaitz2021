@@ -1,7 +1,7 @@
 <header>
     <h1><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></h1>    
 </header>
-<main class="main-container-inicio" class="flex-container-align-item-center">
+<main>
     <article>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <button class="button" type="submit" name="borrarUsuario"><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></button>

@@ -1,4 +1,6 @@
 <?php 
     echo "REST";
 ?>
-<button type="submit" name="volver">Volver</button>
+<form>
+    <button type="submit" name="volver">Volver</button>
+</form>

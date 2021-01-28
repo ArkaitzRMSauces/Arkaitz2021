@@ -9,5 +9,5 @@ define('PASSWORD','P@ssw0rd'); // Contraseña de usuario administrador de la bas
     define('DNS', 'mysql:host=db771560304.hosting-data.io:3306; dbname=db771560304');//mysql:host=192.168.0.205:3306; dbname=DAW205DBDepartamentos
     define('USER', 'dbo771560304');//usuarioDAW205DBDepartamentos
     define('PASSWORD', 'Covid1234$');//paso
- 
+    
 ?>

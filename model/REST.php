@@ -16,4 +16,7 @@ class REST {
         //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
         return json_decode(file_get_contents("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=$fecha"), true);        
     }
+    public static function amazonWebService($id){
+        return json_decode(file_get_contents("http://petstore-demo-endpoint.execute-api.com/petstore/pets/$id"), true);
+    }
 }

@@ -33,16 +33,16 @@
         <div class=".formMain">
             <p>Web</p>
             <p>Introduce id(numero entero) para sacar un animal</p>
-            <label>Entero: </label>
-            <input type = "number" name ="id" value="id"><br>
-            <p><?php echo $idAnimal?></p>
-            <p><?php echo $nombreAnimal?></p>
-            <p><?php echo $precioAnimal?></p>
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div>
+                    <label>Entero: </label>
+                    <input type = "number" name ="id" value="id"><br><?php if($error!==null){echo $error;}?>
                     <input type="submit" value="Enviar" name="enviarAmazon">
                 </div>
             </form>
+            <p><?php echo $aAmazonWebService['id']?></p>
+            <p><?php echo $aAmazonWebService['type']?></p>
+            <p><?php echo $aAmazonWebService['price']?></p>
         </div>
     </section>
     <section>

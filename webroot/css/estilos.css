@@ -93,12 +93,12 @@ button{
     display: inline-block;
 }
 .divLogin1{
-    width: 500px;height: 500px;
+    width: 500px;
     position: absolute;
     top: 40%; left: 0;
 }
 .divLogin2{
-    width: 500px;height: 500px;
+    width: 500px;
     position: absolute;
     top: 40%; right: 0;
 }

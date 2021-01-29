@@ -19,6 +19,7 @@ body {
     width: 100%;
     margin: 0px;
     font-size: 1.2rem;
+    position: relative;
 }
 
 /* -------- HEADER -------- */
@@ -90,6 +91,16 @@ button{
     border-radius: 12px;
     white-space: normal;
     display: inline-block;
+}
+.divLogin1{
+    width: 500px;height: 500px;
+    position: absolute;
+    top: 40%; left: 0;
+}
+.divLogin2{
+    width: 500px;height: 500px;
+    position: absolute;
+    top: 40%; right: 0;
 }
 /* -------- FOOTER -------- */
 

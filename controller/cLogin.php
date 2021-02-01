@@ -12,6 +12,12 @@ if (isset($_REQUEST['idiomaElegido'])) { // si se ha pulsado el botton de cerrar
     exit;
 }
 
+if(isset($_REQUEST['Registrarse'])){
+    $_SESSION['paginaEnCurso'] = $controladores['registro'];
+    header("Location: index.php");
+    exit;
+}
+
 define("OBLIGATORIO", 1); // defino e inicializo la constante a 1 para los campos que son obligatorios
 
 $entradaOK = true;

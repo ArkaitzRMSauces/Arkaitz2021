@@ -20,6 +20,11 @@ if(isset($_REQUEST['rest'])){
     header("Location: index.php");
     exit;
 }
+if(isset($_REQUEST['miCuenta'])){
+    $_SESSION['paginaEnCurso'] = $controladores['miCuenta'];
+    header("Location: index.php");
+    exit;
+}
 $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 
 $numConexiones = $oUsuarioActual->getNumConexiones(); // variable que tiene el numero de conexiones sacado de la base de datos

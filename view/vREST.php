@@ -31,7 +31,7 @@
     </section>
     <section>
         <div class=".formMain">
-            <p>Web</p>
+            <p><a href="https://docs.aws.amazon.com/es_es/apigateway/latest/developerguide/api-gateway-create-api-from-example.html" target="_blank">LINK WEB REST</a></p>
             <p>Introduce id(numero entero) para sacar un animal</p>
             <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                 <div>

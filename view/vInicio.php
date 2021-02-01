@@ -5,6 +5,7 @@
             <button type="submit" name='cerrarSesion'><?php echo $aLang[$_COOKIE['idioma']]['logoff']; ?></button>
             <button type="submit" name="borrarUsuario"><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></button>
             <button type="submit" name="rest">REST</button>
+            <button type="submit" name="miCuenta">Mi cuenta</button>
         </form>
     </div>
 </header>

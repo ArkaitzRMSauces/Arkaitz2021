@@ -20,9 +20,9 @@ if(isset($_REQUEST['rest'])){
     header("Location: index.php");
     exit;
 }
-if(isset($_REQUEST['miCuenta'])){
-    $_SESSION['paginaEnCurso'] = $controladores['miCuenta'];
-    header("Location: index.php");
+if(isset($_REQUEST['miCuenta'])){ // si se ha pulsado el boton de Mi Cuenta
+    $_SESSION['paginaEnCurso'] = $controladores['miCuenta']; // almacenamos en la variable de sesion 'pagina' la ruta del controlador de MiCuenta
+    header('Location: index.php');
     exit;
 }
 $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
@@ -30,7 +30,6 @@ $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $numConexiones = $oUsuarioActual->getNumConexiones(); // variable que tiene el numero de conexiones sacado de la base de datos
 $descUsuario = $oUsuarioActual->getDescUsuario(); // variable que tiene la descripcion del usuario sacado de la base de datos
 $ultimaConexion = $oUsuarioActual->getFechaHoraUltimaConexion(); // variable que tiene la ultima hora de conexion del usuario
-$imagenUsuario = $oUsuarioActual->getImagenPerfil(); // variable que tiene la imagen de perfil del usuario
 
 $vistaEnCurso = $vistas['inicio']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 require_once $vistas['layout'];

@@ -18,7 +18,8 @@ $aLang = [
         'lastConnection' => 'Ultima conexion: '.(isset($usuarioActual) ? date('d/m/Y H:i:s',$usuarioActual->getFechaHoraUltimaConexion()) : null),
         'details' => 'Detalle',
         'editProfile' => 'Editar Perfil',
-        'out' => 'Cancelar'
+        'out' => 'Cancelar',
+        'description' => 'Descripcion'
     ],
 
     'en' => [
@@ -35,7 +36,8 @@ $aLang = [
         'lastConnection' => 'Last connection: '.(isset($usuarioActual) ? date('d/m/Y H:i:s',$usuarioActual->getFechaHoraUltimaConexion()) : null),
         'details' => 'Detail',
         'editProfile' => 'Edit Profile',
-        'out' => 'Cancel'
+        'out' => 'Cancel',
+        'description' => 'Description'
     ]
 ];
 ?>

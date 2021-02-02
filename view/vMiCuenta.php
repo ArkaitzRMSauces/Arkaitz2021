@@ -2,11 +2,6 @@
     <h1>MI CUENTA</h1>
 </header>
 <main>
-    <article>
-        <header>
-            <h2>Mi Cuenta</h2>
-        </header>
-        
         <form name="form-miCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 
             <div>

@@ -12,7 +12,7 @@ $controladores = [
     "borrar" => "controller/cBorrarUsuario.php",
     "registro" => "controller/cRegistro.php",
     "miCuenta" => "controller/cMiCuenta.php",
-    "cambiarPassword" => "controller/cCambiarPassword",
+    "cambiarPassword" => "controller/cCambiarPassword.php",
     "rest" => "controller/cREST.php"
 ];
 
@@ -23,7 +23,7 @@ $vistas = [
     "borrar" => "view/vBorrarUsuario.php",
     "registro" => "view/vRegistro.php",
     "miCuenta" => "view/vMiCuenta.php",
-    "cambiarPassword" => "view/vCambiarPassword",
+    "cambiarPassword" => "view/vCambiarPassword.php",
     "rest" => "view/vREST.php"
 ];
 ?>

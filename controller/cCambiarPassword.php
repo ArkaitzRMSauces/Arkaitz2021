@@ -41,7 +41,7 @@ if (isset($_REQUEST["CambiarPassword"])) { // comprueba que el usuario le ha dad
     }
 
     if($entradaOK){
-        if(hash("sha256", $oUsuarioActual->codUsuario . $_REQUEST['Password']) != $oUsuarioActual->password){
+        if(hash("sha256", $oUsuarioActual->getCodUsuario() . $_REQUEST['Password']) != $oUsuarioActual->getPassword()){
             $aErrores['Password'] = "Password incorrecta";
             $_REQUEST['Password'] = "";
             $entradaOK = false;
@@ -55,7 +55,7 @@ if (isset($_REQUEST["CambiarPassword"])) { // comprueba que el usuario le ha dad
 
 if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y hago su tratamiento
 
-    $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'] = UsuarioPDO::cambiarPassword($oUsuarioActual->codUsuario,$_REQUEST['PasswordNueva']); // guardamos en la variable de sesion el objeto usuario de la funcion
+    $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'] = UsuarioPDO::cambiarPassword($oUsuarioActual->getCodUsuario(),$_REQUEST['PasswordNueva']); // guardamos en la variable de sesion el objeto usuario de la funcion
     $_SESSION['paginaEnCurso'] = $controladores['miCuenta']; // guardamos en la variable de sesion 'pagina' la ruta del controlador de miCuenta
     header('Location: index.php'); // redirige al index.php
     exit;

@@ -2,17 +2,17 @@
     <h1>Cambiar Password</h1>
 </header>
 
-<form class="formMain" name="form-cambiarPassword" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+<form id="formPassword" name="form-cambiarPassword" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 
     <div>
-        <input class="inputMain"  type="password" name="Password" value="<?php
+        <input class="inputPassword" type="password" name="Password" value="<?php
         echo (isset($_REQUEST['Password'])) ? $_REQUEST['Password'] : null;?>"
-        placeholder="<?php echo $aLang[$_COOKIE['idioma']]['password'];?>" required>
+        placeholder="<?php echo $aLang[$_COOKIE['idioma']]['oldPassword'];?>" required>
     </div>
     <div>
-        <input class="inputMain"  type="password" name="PasswordNueva" value="<?php
+        <input class="inputPassword" type="password" name="PasswordNueva" value="<?php
             echo (isset($_REQUEST['PasswordNueva'])) ? $_REQUEST['PasswordNueva'] : null;
-            ?>" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['password'];?>"  required>
+            ?>" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['newPassword'];?>"  required>
 
     </div>
     <?php
@@ -20,9 +20,9 @@
     ?>
 
     <div>
-        <input class="inputMain"  type="password" name="PasswordRepetida" value="<?php
+        <input class="inputPassword" type="password" name="PasswordRepetida" value="<?php
             echo (isset($_REQUEST['PasswordRepetida'])) ? $_REQUEST['PasswordRepetida'] : null;
-            ?>" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['password'];?>" required>
+            ?>" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['repeatPassword'];?>" required>
 
     </div>
     <?php
@@ -30,10 +30,10 @@
     ?>
 
     <div>
-        <button class="button" type="submit" name="CambiarPassword">Cambiar Password</button>
+        <button class="button" id="cambiarPassword" type="submit" name="CambiarPassword">Cambiar Password</button>
     </div>
 
 </form>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="registro" method="post">
-    <button class="button" type="submit"name="Cancelar">Cancelar</button>
+    <button class="button" id="cancelarPassword" type="submit"name="Cancelar">Cancelar</button>
 </form>

@@ -120,6 +120,22 @@ button{
     position: absolute;
     top: 40%; right: 0;
 }
+.articleREST{
+    width: 100vh;height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.sectionREST1{
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
+    overflow: scroll;
+}
+.sectionREST2{
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
+}
 #editarCuenta{
     color: grey;
 }

@@ -14,33 +14,33 @@ Aplicacion final DWES MVC + Control de Acceso + utilizacion y creacion de API RE
 
 # Funcionalidades:
 
-Control de Acceso
+- Control de Acceso
 
-Registro de Usuarios
+- Registro de Usuarios
 
-Ventana de Inicio de Usuarios
+- Ventana de Inicio de Usuarios
 
-Editar Cuenta
+- Editar Cuenta
 
-Cambiar Contraseña
+- Cambiar Contraseña
 
-Borrar Cuenta
+- Borrar Cuenta
 
-Uso de API REST
+- Uso de API REST
 
 # Front end:
 
-HTML5
+- HTML5
 
-CSS3
+- CSS3
 
-SASS
+- SASS
 
 # Back end:
 
-PHP 7.4
+- PHP 7.4
 
-MySQL 8.0
+- MySQL 8.0
 
 # Entornos:
 

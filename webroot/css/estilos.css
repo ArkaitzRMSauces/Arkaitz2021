@@ -169,6 +169,9 @@ button{
     top: 60%;
     left: 40.8%;
 }
+.hidden{
+    display: none;
+}
 /* -------- FOOTER -------- */
 
 footer {

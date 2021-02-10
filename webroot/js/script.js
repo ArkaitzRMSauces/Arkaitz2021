@@ -44,3 +44,22 @@ function campoCorrecto(id,p){
     p.style.color = "";
     p.innerHTML = ""; 
 }
+function buscarDigimon(){
+    var enviar = document.getElementById("enviarDigimonNombre");
+    enviar.addEventListener("click",()=>{
+        var nombre = document.getElementById("pDigimon1");
+        var imagen = document.getElementById("imgDigimon");
+        var nivel = document.getElementById("pDigimon2");
+        var id = document.getElementById("idDigimonNombre");
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET","https://digimon-api.vercel.app/api/digimon/name/"+nombre);
+        xhttp.send();
+        xhttp.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200){
+                var digimon=JSON.parse(this.responseText);
+                imagen.setAttribute("src",digimon.s)
+                p.textContent = digimon.level;
+            }
+        }
+    })
+}

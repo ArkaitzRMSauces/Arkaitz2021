@@ -46,13 +46,13 @@
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <div>
                 <label>Nombre: </label>
-                <input type="text" name ="idDigimonNombre"><br><?php if($error!==null){echo $error;}?>
+                <input type="text" id="idDigimonNombre" name ="idDigimonNombre"><br><?php if($error!==null){echo $error;}?>
                 <input type="submit" value="Enviar" name="enviarDigimonNombre">
             </div>
         </form>
-        <p><?php echo $aDigimonNombre['name']?></p>
-        <p><?php echo $aDigimonNombre['img']?></p>
-        <p><?php echo $aDigimonNombre['level']?></p>
+        <p id="pDigimon1"></p>
+        <img id="imgDigimon" src="">
+        <p id="pDigimon2"></p>
     </section>
     <section>
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">

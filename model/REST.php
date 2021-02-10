@@ -19,10 +19,4 @@ class REST {
     public static function amazonWebService($id){
         return json_decode(file_get_contents("http://petstore-demo-endpoint.execute-api.com/petstore/pets/$id"), true);
     }
-    public static function digimonNameService($name){
-        return json_decode(file_get_contents("https://digimon-api.vercel.app/api/digimon/name/$name"), true);
-    }
-    public static function digimonLevelService($level){
-        return json_decode(file_get_contents("https://digimon-api.vercel.app/api/digimon/level/$level"), true);
-    }
 }

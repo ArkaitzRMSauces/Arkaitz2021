@@ -1,4 +1,4 @@
-function nombreRegistro(id, p){
+function validarCampos(id, p){
     var idValue = id.value;
     switch(id.id){
         case "inpRegistro1":
@@ -10,19 +10,25 @@ function nombreRegistro(id, p){
         break;
         case "inpRegistro2":
             if(idValue.length==0){
-                id.style.backgroundColor = "red";
-                p.classList.remove("hidden");
-                p.style.color = "red";
-                p.innerHTML = "Error, tamaño incorrecto, no puede estar vacio"; 
+                campoIncorrecto(id, p, "hidden","red","Error, tamaño incorrecto, no puede estar vacio"); 
             }else{
                 campoCorrecto(id,p);
             }
         break;
         case "inpRegistro3":
-            if(idValue.length>8){
-                
+        case "inpRegistro4":
+            if(idValue.length==0 || idValue.length>8){
+                campoIncorrecto(id, p, "hidden","red","Error, tamaño incorrecto, no puede estar vacio o ser mayor de 8 caracteres"); 
             }else{
                campoCorrecto(id,p); 
+            }
+        break;
+        case "inpLogin1":
+        case "inpLogin2":
+            if(id.value==0){
+                campoIncorrecto(id, p, "hidden","red","Error, el campo no puede estar vacio"); 
+            }else{
+                campoCorrecto(id,p);
             }
         break;
     }

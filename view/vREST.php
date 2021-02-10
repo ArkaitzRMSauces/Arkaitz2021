@@ -42,8 +42,21 @@
         <p><?php echo $aAmazonWebService['price']?></p>
     </section>
     <section>
+        <p><a href="https://digimon-api.herokuapp.com/index.html" target="_blank">LINK WEB REST DIGIMON</a></p>
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            <div>
+                <label>Nombre: </label>
+                <input type="text" name ="idDigimonNombre"><br><?php if($error!==null){echo $error;}?>
+                <input type="submit" value="Enviar" name="enviarDigimonNombre">
+            </div>
+        </form>
+        <p><?php echo $aDigimonNombre['name']?></p>
+        <p><?php echo $aDigimonNombre['img']?></p>
+        <p><?php echo $aDigimonNombre['level']?></p>
+    </section>
+    <section>
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <button class="button" type="submit" name="volver">Volver</button>
         </form>
-    </section>
+    </section>    
 </article>

@@ -14,14 +14,16 @@
     </div>
     <form class="formMain" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div>
-            <input class="inputMain" type="text" id="CodUsuario" name="CodUsuario" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['user']; ?>" value="<?php
+            <input id="inpLogin1" onblur="validarCampos(inpLogin1,pLogin1)" class="inputMain" type="text" id="CodUsuario" name="CodUsuario" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['user']; ?>" value="<?php
             echo (isset($_REQUEST['CodUsuario'])) ? $_REQUEST['CodUsuario'] : null;
             ?>">
+            <p id="pLogin1" class="hidden"></p>
         </div>
         <div>
-            <input class="inputMain" type="password" id="Password" name="Password" value="<?php
+            <input id="inpLogin2" onblur="validarCampos(inpLogin2,pLogin2)" class="inputMain" type="password" id="Password" name="Password" value="<?php
             echo (isset($_REQUEST['Password'])) ? $_REQUEST['Password'] : null;
             ?>" placeholder="<?php echo $aLang[$_COOKIE['idioma']]['password']; ?>">
+            <p id="pLogin2" class="hidden"></p>
         </div>
 
         <div>

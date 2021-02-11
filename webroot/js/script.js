@@ -1,16 +1,19 @@
+var correcto = true;
 function validarCampos(id, p){
     var idValue = id.value;
     switch(id.id){
         case "inpRegistro1":
             if(idValue.length==0 || idValue.length>15){
-                campoIncorrecto(id, p, "hidden","red","Error, tamaño incorrecto, no puede estar vacio o ser mayor de 15 caracteres");
+                campoIncorrecto(id, p, "hidden","red","Tamaño incorrecto, no puede estar vacio o ser mayor de 15 caracteres");
+                correcto = false;
             }else{
                 campoCorrecto(id,p);
             }
         break;
         case "inpRegistro2":
             if(idValue.length==0){
-                campoIncorrecto(id, p, "hidden","red","Error, tamaño incorrecto, no puede estar vacio"); 
+                campoIncorrecto(id, p, "hidden","red","Tamaño incorrecto, no puede estar vacio"); 
+                correcto = false;
             }else{
                 campoCorrecto(id,p);
             }
@@ -18,7 +21,8 @@ function validarCampos(id, p){
         case "inpRegistro3":
         case "inpRegistro4":
             if(idValue.length==0 || idValue.length>8){
-                campoIncorrecto(id, p, "hidden","red","Error, tamaño incorrecto, no puede estar vacio o ser mayor de 8 caracteres"); 
+                campoIncorrecto(id, p, "hidden","red","Tamaño incorrecto, no puede estar vacio o ser mayor de 8 caracteres"); 
+                correcto = false;
             }else{
                campoCorrecto(id,p); 
             }
@@ -26,12 +30,19 @@ function validarCampos(id, p){
         case "inpLogin1":
         case "inpLogin2":
             if(id.value==0){
-                campoIncorrecto(id, p, "hidden","red","Error, el campo no puede estar vacio"); 
+                campoIncorrecto(id, p, "hidden","red","El campo no puede estar vacio"); 
+                correcto = false;
             }else{
                 campoCorrecto(id,p);
             }
         break;
+        case "inpMiCuenta1":
+            if(idValue.length==0){
+                campoIncorrecto(id, p, "hidden","red","Tamaño incorrecto, no puede estar vacio"); 
+            }
+        break;
     }
+    return correcto;
 }
 function campoIncorrecto(id, p, clase, color, mensajeError){
     id.style.backgroundColor = color;
@@ -44,22 +55,18 @@ function campoCorrecto(id,p){
     p.style.color = "";
     p.innerHTML = ""; 
 }
+/*
 function buscarDigimon(){
-    var enviar = document.getElementById("enviarDigimonNombre");
-    enviar.addEventListener("click",()=>{
-        var nombre = document.getElementById("pDigimon1");
-        var imagen = document.getElementById("imgDigimon");
-        var nivel = document.getElementById("pDigimon2");
-        var id = document.getElementById("idDigimonNombre");
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET","https://digimon-api.vercel.app/api/digimon/name/"+nombre);
-        xhttp.send();
-        xhttp.onreadystatechange=function(){
-            if(this.readyState==4 && this.status==200){
-                var digimon=JSON.parse(this.responseText);
-                imagen.setAttribute("src",digimon.s)
-                p.textContent = digimon.level;
-            }
-        }
-    })
+    var id = document.getElementById("idDigimonNombre").value;
+    var imagen = document.getElementById("imgDigimon");
+    var nombre = document.getElementById("pDigimon1");
+    var xhttp = new XMLHttpRequest();
+    xhttp.open(`GET`,`https://digimon-api.vercel.app/api/digimon/name/${id}`);
+    xhttp.send();
+    xhttp.onreadystatechange = function(aEvt){
+        console.log(aEvt);
+        imagen.setAttribute("src",`https://digimon.shadowsmith.com/img/${id}.jpg`);
+        nombre.textContent = id.replace(id.charAt(0),id.charAt(0).toUpperCase());
+    }
 }
+*/

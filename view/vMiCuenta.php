@@ -8,9 +8,10 @@
     </div>
     <div>
         <label for="DescUsuario">Descripcion</label><br>
-        <input class="inputMain" type="text" name="DescUsuario" value="<?php
+        <input id="inpMiCuenta1" onblur="validarCampos(inpMiCuenta1,pMiCuenta1)" class="inputMain" type="text" name="DescUsuario" value="<?php
             echo (isset($_REQUEST['DescUsuario'])) ? $_REQUEST['DescUsuario'] : $oUsuarioActual->getDescUsuario(); 
             ?>" required>
+        <p id="pMiCuenta1" class="hidden"></p>
     </div>
     <?php
         echo ($aErrores['DescUsuario']!=null) ? "<span class='error'>".$aErrores['DescUsuario']."</span>" : null;// si el campo es erroneo se muestra un mensaje de error
@@ -28,7 +29,6 @@
 
     <div>
         <button class="button" type="submit" name="Editar">Editar</button>
-
     </div>
 </form>
 <form id="formMiCuenta-buttons" action="<?php echo $_SERVER['PHP_SELF'] ?>" name="registro" method="post">

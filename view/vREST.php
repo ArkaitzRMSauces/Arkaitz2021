@@ -41,23 +41,19 @@
         <p><?php echo $aAmazonWebService['type']?></p>
         <p><?php echo $aAmazonWebService['price']?></p>
     </section>
-    <!--
-    <section>
-        <p><a href="https://digimon-api.herokuapp.com/index.html" target="_blank">LINK WEB REST DIGIMON</a></p>
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-            <div>
-                <label>Nombre: </label>
-                <input type="text" id="idDigimonNombre"><br><?php if($error!==null){echo $error;}?>
-                <input type="submit" value="Enviar" name="enviarDigimonNombre" onclick="buscarDigimon()">
-            </div>
-        </form>
+    <section class="sectionREST3">
+        <p><a href="https://digimon-api.herokuapp.com/index.html" target="_blank">LINK WEB REST DIGIMON</a></p>        
+        <div>
+            <label>Nombre: </label>
+            <input type="text" id="idDigimonNombre"><br><?php if($error!==null){echo $error;}?>
+            <input type="submit" value="Enviar" name="enviarDigimonNombre" onclick="buscarDigimon()">
+        </div>
         <p id="pDigimon1"></p>
         <img id="imgDigimon" src="">
     </section>
-    -->
     <section>
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-            <button class="button" type="submit" name="volver">Volver</button>
+            <button class="button" id="btnREST" type="submit" name="volver">Volver</button>
         </form>
     </section>
     

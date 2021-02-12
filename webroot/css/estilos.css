@@ -140,6 +140,20 @@ button{
     margin: 5px;
     padding: 5px;
 }
+.sectionREST3{
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    width: 33%;
+}
+#btnREST{
+    position: absolute;
+    top: 75%;
+    left: 40%;
+}
 #editarCuenta{
     color: grey;
 }

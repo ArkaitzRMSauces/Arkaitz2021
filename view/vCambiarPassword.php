@@ -1,4 +1,5 @@
 <header>
+    <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
     <h1>Cambiar Password</h1>
 </header>
 

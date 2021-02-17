@@ -4,6 +4,7 @@
     Última modificación: 26/01/2021
 -->
 <header>
+    <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
     <h1>REST</h1>
     <div>
         <form class="navInicio" name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

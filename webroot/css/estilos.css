@@ -33,8 +33,13 @@ header {
     font-family: "Helvetica,sans-serif";
     color: white;
 }
-h1{
-    margin-left: 47%;
+#imgHeader{
+    width: 10%;
+    height: 70%;
+    margin-left: 10%;
+}
+#h1Header{
+    margin-right: 45%;
 }
 .github>img{
     width: 40px;

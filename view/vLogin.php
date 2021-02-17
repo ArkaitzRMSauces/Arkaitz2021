@@ -1,5 +1,6 @@
 <header>
-    <h1><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></h1>
+    <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
+    <h1 id="h1Header"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></h1>
 </header>
 <main>
     <form class="formIdiomas" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

@@ -1,4 +1,5 @@
 <header>
+    <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
     <h1><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></h1>    
 </header>
 <main>

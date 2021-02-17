@@ -1,4 +1,5 @@
 <header>
+    <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
     <h1>Inicio</h1>
     <div>
         <form class="navInicio" name="logout" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

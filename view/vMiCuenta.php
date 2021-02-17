@@ -1,6 +1,6 @@
 <header>
     <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
-    <h1>Mi Cuenta</h1>
+    <h1 id="h1Header">Mi Cuenta</h1>
 </header>
 <form id="formMiCuenta" name="form-miCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
     <div>

@@ -6,6 +6,21 @@ if(isset($_REQUEST['volver'])){
     header("Location: index.php");        
     exit;
 }
+if (isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el boton de Cerrar Sesion
+    session_destroy(); // destruye todos los datos asociados a la sesion
+    header("Location: index.php"); // redirige al login
+    exit;
+}
+if(isset($_REQUEST['borrarUsuario'])){
+    $_SESSION['paginaEnCurso'] = $controladores['borrar'];
+    header("Location: index.php");
+    exit;
+}
+if(isset($_REQUEST['miCuenta'])){ // si se ha pulsado el boton de Mi Cuenta
+    $_SESSION['paginaEnCurso'] = $controladores['miCuenta']; // almacenamos en la variable de sesion 'pagina' la ruta del controlador de MiCuenta
+    header('Location: index.php');
+    exit;
+}
 if(isset($_REQUEST['enviar'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
     $aServicioAPOD = REST::sevicioAPOD($_REQUEST['fecha']);

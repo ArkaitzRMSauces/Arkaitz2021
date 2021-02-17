@@ -1,6 +1,6 @@
 <header>
     <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
-    <h1><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></h1>    
+    <h1 id="h1Header"><?php echo $aLang[$_COOKIE['idioma']]['deleteUser']; ?></h1>    
 </header>
 <main>
     <article>

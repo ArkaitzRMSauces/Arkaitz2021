@@ -1,6 +1,6 @@
 <header>
     <img id="imgHeader" src="webroot/media/LogoEmpresa.png">
-    <h1>Cambiar Password</h1>
+    <h1 id="h1Header">Cambiar Password</h1>
 </header>
 
 <form id="formPassword" name="form-cambiarPassword" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">

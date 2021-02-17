@@ -22,9 +22,15 @@
             </form>
         </div>
         <div>
-            <p><?php echo $tituloEnCurso?></p>
+            <?php if($tituloEnCurso!==null || $imagenEnCurso!==null || $descripcionEnCurso!==null){
+            ?><p><?php echo $tituloEnCurso?></p>
             <img src="<?php echo $imagenEnCurso?>" width="100">
             <p><?php echo $descripcionEnCurso?></p>
+            <?php
+            }else{?>
+                <p>Demasiadas solicitudes</p>
+            <?php            
+            }?>
         </div>
     </section>
     <section class="sectionREST2">

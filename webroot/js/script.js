@@ -62,11 +62,11 @@ function buscarDigimon(){
     var xhttp = new XMLHttpRequest();
     xhttp.open(`GET`,`https://digimon-api.vercel.app/api/digimon/name/${id}`);
     xhttp.send();
-    console.log(xhttp);
-    xhttp.onreadystatechange = function(aEvt){
+    var nombreMinuscula = id.toLowerCase();
+    xhttp.onreadystatechange = function(){
         if(xhttp.readyState==4 && xhttp.status==200){
-            imagen.setAttribute("src",`https://digimon.shadowsmith.com/img/${id}.jpg`);
-            nombre.textContent = id.replace(id.charAt(0),id.charAt(0).toUpperCase());
+            imagen.setAttribute("src",`https://digimon.shadowsmith.com/img/${nombreMinuscula}.jpg`);
+            nombre.innerHTML = id;
         }else{
             imagen.setAttribute("src","");
             nombre.innerHTML = "No se ha encontrado el digimon en la base de datos";

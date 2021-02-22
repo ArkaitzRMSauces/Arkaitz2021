@@ -15,8 +15,8 @@
         <p><?php echo ($numConexiones > 1) ? $aLang[$_COOKIE['idioma']]['numConnections'] : $aLang[$_COOKIE['idioma']]['numConnectionsWelcome']; ?></p>
         <?php echo ($ultimaConexion != null) ? "<p>" . $aLang[$_COOKIE['idioma']]['lastConnection'] . "</p>" : null; ?>
         <form name="rest" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <button type="submit" name="rest"><img src="webroot/media/apiRest.png" width="100px" height="100px"></button>
+            <button type="submit" name="mtoDepartamentos"><img src="webroot/media/mtoDepartamento.png" width="100px" height="100px"></button>
+            <button type="submit" name="rest"><img src="webroot/media/apiRest.png" width="100px" height="100px"></button>            
         </form>
     </article>
 </main>
-</body>

@@ -25,6 +25,11 @@ if(isset($_REQUEST['miCuenta'])){ // si se ha pulsado el boton de Mi Cuenta
     header('Location: index.php');
     exit;
 }
+if(isset($_REQUEST['mtoDepartamentos'])){ // si se ha pulsado el boton de Mi Cuenta
+    $_SESSION['paginaEnCurso'] = $controladores['mtoDepartamento']; // almacenamos en la variable de sesion 'pagina' la ruta del controlador de MiCuenta
+    header('Location: index.php');
+    exit;
+}
 $oUsuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 
 $numConexiones = $oUsuarioActual->getNumConexiones(); // variable que tiene el numero de conexiones sacado de la base de datos

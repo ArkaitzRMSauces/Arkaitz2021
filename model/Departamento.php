@@ -2,23 +2,37 @@
     class Departamento{
         private $codDepartamento;
         private $descDepartamento;
-        private $fechaCreacionDepartamento;
         private $volumenNegocio;
         private $fechaBajaDepartamento;
-        function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenNegocio, $fechaBajaDepartamento = null){
+        function __construct($codDepartamento, $descDepartamento, $volumenNegocio, $fechaBajaDepartamento = null){
             $this->codDepartamento = $codDepartamento;
             $this->descDepartamento = $descDepartamento;
-            $this->fechaCreacionDepartamento = $fechaCreacionDepartamento;
             $this->volumenDeNegocio = $volumenNegocio;
             $this->fechaBajaDepartamento = $fechaBajaDepartamento;
         }
-        
-        function __get($atributo){
-            return $this->$atributo;
+        function getCodDepartamento(){
+            return $this->codDepartamento;
         }
-        
-        function __set($atributo, $nuevoAtributo) {
-            $this->$atributo = $nuevoAtributo;
+        function getDescDepartamento(){
+            return $this->descDepartamento;
+        }
+        function getVolumenDeNegocio(){
+            return $this->volumenDeNegocio;
+        }
+        function getFechaBajaDepartamento(){
+            return $this->fechaBajaDepartamento;
+        }
+        function setCodDepartamento($codDepartamento){
+            $this->codDepartamento=$codDepartamento;
+        }
+        function setDescDepartamento($descDepartamento){
+            $this->descDepartamento=$descDepartamento;
+        }
+        function setVolumenDeNegocio($volumenDeNegocio){
+            $this->volumenDeNegocio=$volumenDeNegocio;
+        }
+        function setFechaBajaDepartamento($fechaBajaDepartamento){
+            $this->fechaBajaDepartamento=$fechaBajaDepartamento;
         }
     }
 ?>

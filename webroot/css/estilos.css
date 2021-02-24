@@ -116,14 +116,8 @@ button{
     display: inline-block;
 }
 .divLogin1{
-    width: 500px;
     position: absolute;
-    top: 40%; left: 0;
-}
-.divLogin2{
-    width: 500px;
-    position: absolute;
-    top: 40%; right: 0;
+    top: 14%; left: 10%;
 }
 .navInicio{
     margin-right: 250px;

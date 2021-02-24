@@ -4,7 +4,7 @@
         public static function buscaDepartamentosPorDescripcion($descDepartamento){
             $aDepartamentos[];
             
-            $consulta = "Select * FROM T02_Departamento where T02_DescDepartamento LIKE '%'";
+            $consulta = "Select * FROM T02_Departamento where T02_DescDepartamento LIKE %";
             $resultado = DBPDO::ejecutarConsulta($sentenciaSQL, [$descDepartamento]);
 
         if ($resultadoConsulta->rowCount() > 0) {
@@ -14,6 +14,7 @@
             while ($departamento) { 
                 $oDepartamento = new Departamento($departamento->T02_CodDepartamento, $departamento->T02_DescDepartamento, $departamento->T02_FechaCreacionDepartamento, $departamento->T02_VolumenNegocio, $departamento->T02_FechaBajaDepartamento);
                 $aDepartamentos[$numDepartamento] = $oDepartamento;
+                $numDepartamento++;
                 $departamento = $resultadoConsulta->fetchObject();
             }
         }
@@ -65,7 +66,7 @@
             $codigoNoExiste = true;
             
             $consulta = "SELECT T02_CodDepartamento from T02_Departamento WHERE T02_CodDepartamento=?";
-            $resultado = DBPDO::ejecutaConsulta($consulata, $codDepartamento);
+            $resultado = DBPDO::ejecutaConsulta($consulata, [$codDepartamento]);
             
             if($resultado->rowCount()>0){
                 $codigoNoExiste = false;

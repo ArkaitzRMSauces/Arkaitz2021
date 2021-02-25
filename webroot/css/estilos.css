@@ -185,6 +185,21 @@ button{
 .hidden{
     display: none;
 }
+.tableDepartamento{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 75%;
+}
+#btnDepartamento{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+}
+td{
+    color: #8A8A8A;
+    padding: 1%;
+}
 /* -------- FOOTER -------- */
 
 footer {

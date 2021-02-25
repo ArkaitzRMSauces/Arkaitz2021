@@ -5,6 +5,8 @@ require_once "model/Usuario.php";
 require_once "model/UsuarioPDO.php";
 require_once "model/DBPDO.php";
 require_once "model/REST.php";
+require_once "model/Departamento.php";
+require_once "model/DepartamentoPDO.php";
 
 $controladores = [
     "login" => "controller/cLogin.php",

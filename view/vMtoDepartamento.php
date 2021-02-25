@@ -13,14 +13,14 @@
     <form method="post">
         <div>
             <label>Buscar departamento: </label>
-            <input type="text" name="descDepartamento"><?php if($error!==null){echo $error;}?>
+            <input type="text" name="descDepartamento">
             <button type="submit" name="buscarDepartamento"><img src="webroot/media/buscarDepartamento.jpg" width="25px" height="25px"></button>
         </div>
     </form>
-    <table>
-        <?php
-            var_dump($aDepartamentos);
-        ?>
+    <?php 
+        if(count($aDepartamentos)!=0){
+    ?> 
+    <table class="tableDepartamento">
         <tr>
             <th>Código</td>
             <th>Descripción</td>
@@ -42,7 +42,12 @@
     </table>
     <section>
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-            <button class="button" type="submit" name="volver">Volver</button>
+            <button class="button" id="btnDepartamento" type="submit" name="volver">Volver</button>
         </form>
+    <?php
+    }else{
+        echo "No se han encontrado departamentos con esa descripción";
+    }
+    ?>
     </section>
 </main>

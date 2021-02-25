@@ -24,8 +24,9 @@
     }
 
     define("OPCIONAL", 0);
+    $entradaOk = true;
+    
     if(isset($_REQUEST["buscarDepartamento"])){
-        $entradaOk = true;
         $errorBusqueda = null;
         $errorBusqueda = validacionFormularios::comprobarAlfaNumerico($_REQUEST["descDepartamento"], 255, 1, OPCIONAL);
         if($errorBusqueda != null){

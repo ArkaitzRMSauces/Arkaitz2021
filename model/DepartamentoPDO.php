@@ -2,25 +2,24 @@
     class DepartamentoPDO{
         
         public static function buscaDepartamentosPorDescripcion($descDepartamento){
-            $aDepartamentos[];
-            
-            $consulta = "Select * FROM T02_Departamento where T02_DescDepartamento LIKE %";
-            $resultado = DBPDO::ejecutarConsulta($sentenciaSQL, [$descDepartamento]);
+            $aDepartamentos = [];
+            $sql="SELECT * FROM T02_Departamento where T02_DescDepartamento like :descDepartamento";
+            $resultado=DBPDO::ejecutaConsulta($sql, ["descDepartamento" => "%".$descDepartamento."%"]);
 
-        if ($resultadoConsulta->rowCount() > 0) {
-            $departamento = $resultadoConsulta->fetchObject();
-            $numDepartamento = 0;
-            
-            while ($departamento) { 
-                $oDepartamento = new Departamento($departamento->T02_CodDepartamento, $departamento->T02_DescDepartamento, $departamento->T02_FechaCreacionDepartamento, $departamento->T02_VolumenNegocio, $departamento->T02_FechaBajaDepartamento);
-                $aDepartamentos[$numDepartamento] = $oDepartamento;
-                $numDepartamento++;
-                $departamento = $resultadoConsulta->fetchObject();
+            $indice=0;
+            if($resultado->rowCount()>0){
+                $departamentoDatos=$resultado->fetchObject();
+                while($departamentoDatos){
+                    $aDepartamentos[$indice] = new Departamento($departamentoDatos->T02_CodDepartamento,
+                                                                $departamentoDatos->T02_DescDepartamento,
+                                                                $departamentoDatos->T02_VolumenNegocio, 
+                                                                $departamentoDatos->T02_FechaBajaDepartamento);
+                    $indice++;
+                    $departamentoDatos=$resultado->fetchObject();
+                } 
             }
-        }
-            
             return $aDepartamentos;
-        }
+           }
         
         public static function altaDepartamento($codDepartamento, $descDepartamento, $volumenNegocio){
             $altaDepartamento = false;

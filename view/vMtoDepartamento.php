@@ -22,10 +22,10 @@
     ?> 
     <table class="tableDepartamento">
         <tr>
-            <th>Código</td>
-            <th>Descripción</td>
-            <th>Fecha</td>
-            <th>Volumen de Negocio</td>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+            <th>Volumen de Negocio</th>
         </tr>
         <?php
             foreach($aDepartamentos as $numDepartamento => $oDepartamento){                
@@ -35,6 +35,9 @@
             <td><?php echo $oDepartamento->getDescDepartamento();?></td>
             <td><?php echo $oDepartamento->getFechaBajaDepartamento() ?></td>
             <td><?php echo $oDepartamento->getVolumenDeNegocio();?></td>
+            <td><input type="submit" name="editar" value="&#128270;" style="width: 25px; height: 25px;">
+            <input type="submit" name="consultar" value="&#9935;" style="width: 25px; height: 25px;">
+            <input type="submit" name="borrar" value="&#9003;" style="width: 25px; height: 25px;"></td>
         </tr>
         <?php
             }
